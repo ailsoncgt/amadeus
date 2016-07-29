@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+	{% block leftMenu %}
+		<form action="#">
+			<div class="form-group">
+				<input type="text" class="form-control" id="username" name="username" placeholder="Usuario">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+			</div>
+			<button class="btn btn-success text-center" type="submit"> Entrar </button>
+		</form>
+	{% endblock %}
+	{% block rightContent %}
+		<!-- <i class="material-icons">search</i> -->
+		<h3 style="display: inline">Contato</h3>
+		{% if success %}
+        <div class="alert alert-success">
+            Mensagem enviada com sucesso
+        </div>
+        {% endif %}
+        <form class="form-horizontal" action="" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+                <label for="{{ field.auto_id }}" class="col-sm-2 control-label">{{ field.label }}</label>
+                <div class="col-sm-10">
+                  {% render_field field class='form-control' %}
+                  {% for error in field.errors %}
+                  <span class="help-block" id="erro">{{ error }}</span>
+                  {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-success">Enviar</button>
+                </div>
+            </div>
+        </form>
+	{% endblock %}

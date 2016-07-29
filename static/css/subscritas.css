@@ -1,0 +1,92 @@
+/*================================ NAVBAR, DROPDOWNS ================================*/
+.active a, .open a[class="dropdown-toggle"]{
+	background: #009900 !important;
+}
+
+.navbar-default{
+	background: #009900;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+}
+
+.navbar .navbar-form{
+    margin-top: 13px;
+    display: inline-flex;
+    width: 28%;
+    padding-right: 0;
+}
+
+.navbar-form .form-group{
+    display: inline-flex;
+    width: 100%;
+}
+
+.navbar-nav > li > a{
+	text-shadow: none !important;
+}
+
+.navbar-nav > li > a{
+	color: white !important;
+}
+
+.navbar .dropdown-menu li > a{
+	color: #009900;
+}
+
+.navbar .dropdown-menu li > a, .navbar.navbar-default .dropdown-menu li > a {
+    font-size: 16px;
+    padding: 5px 16px;
+}
+
+.navbar .dropdown-menu li > a:focus, .navbar .dropdown-menu li > a:hover, .navbar.navbar-default .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover {
+    color: white;
+    background-color: #009900;
+    background-image: linear-gradient(to bottom,#009900 0,#009900 100%);
+}
+
+/*============================ Botão checkbox animado ============================*/
+.togglebutton label .toggle, .togglebutton label input[type="checkbox"][disabled] + .toggle {
+	background-color: rgba(210, 171, 171, 0.7);
+}
+
+/*======================================= FORM-CONTROL(COR DA LINHA BOTTOM DO INPUT) ==========================*/
+.form-control, .form-group .form-control {
+    border: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#009900), to(#009900)), -webkit-gradient(linear, left top, left bottom, from(#009900), to(#009900)) !important;
+    background-image: -webkit-linear-gradient(#009900, #009900), -webkit-linear-gradient(#009900, #009900) !important;
+    background-image: -o-linear-gradient(#009900, #009900), -o-linear-gradient(#009900, #009900) !important;
+    background-image: linear-gradient(#009900, #009900), linear-gradient(#009900, #009900) !important;
+    -webkit-background-size: 0 2px, 100% 1px;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center -webkit-calc(100% - 1px);
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background 0s ease-out;
+    -o-transition: background 0s ease-out;
+    transition: background 0s ease-out;
+    float: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#form-personalizacao .form-control, .cores > .form-control,
+.form-commerce10 .form-control, .cores > .form-control{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#009900), to(#009900)) !important;
+    background-image: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(transparent, transparent) !important;
+    background-image: -o-linear-gradient(transparent, transparent), -o-linear-gradient(transparent, transparent) !important;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent) !important;
+    -webkit-background-size: 0 2px, 100% 1px;
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center -webkit-calc(100% - 1px);
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background 0s ease-out;
+    -o-transition: background 0s ease-out;
+    transition: background 0s ease-out;
+    float: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}

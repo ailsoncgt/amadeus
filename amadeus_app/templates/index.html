@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+
+		<title>Projeto Amadeus</title>
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store">
+		<!-- {% static 'css/bootstrap.min.css' %} -->
+		<link href="{% static 'css/css.css'%}" rel="stylesheet" type="text/css">
+		<link href="{% static 'css/amadeus.css'%}" rel="stylesheet" type="text/css">
+		<link href="{% static 'css/content_management.css'%}" rel="stylesheet" type="text/css">
+		<link href="{% static 'css/jquery-ui-1.7.1.custom.css'%}" rel="stylesheet" type="text/css">
+		<link href="{% static 'imgs/favicon.ico'%}" rel="shortcut icon">
+
+		<script type="text/javascript" src="{% static 'dwr/interface/UtilDWR.js'%}"></script>
+		<script type="text/javascript" src="{% static 'dwr/engine.js'%}"></script>
+		<script type="text/javascript" src="{% static 'dwr/util.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-1.3.2.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-ui-1.7.1.custom.min.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/openid.js'%}"></script>
+		<script type="text/javascript" src="{% static 'js/amadeus.js'%}"></script>
+		<script type="text/javascript">
+		window.history.forward(-1);
+		</script>
+	</head>
+	<body>
+		{% block cabecalho %}
+			<input id="keyUserNotLogged" value="<ajklsdjfiei78324yhre8yds979873w78jklsdkfjsdlkfjlksdfjklksdflk9usdf98723uoudsfjk348987>" type="hidden">
+			<input id="systemVersion" value="00.95.00" type="hidden">
+			<div id="pBody" class="pBody">
+				<div id="pHeader" class="pHeader"></div>
+		{% endblock %}
+		<div id="institutional_menu">
+
+			<span><a href="/amadeuslms/fProject.do" target="_blank">O Projeto</a></span>
+			<span>&nbsp;|&nbsp;</span>
+			<span><a href="/amadeuslms/fCCTE.do" target="_blank">Grupo CCTE</a></span>
+		</div>
+		{% block caminho %}
+		{% endblock caminho %}
+		{% block corpo %}
+		<div class="pw">
+			<div class="plw">
+				<div class="invalidLogin">
+
+				</div>
+				{% block menu_esquerda %}
+					<div class="dLogin">
+						<div class="ldtf"></div><div class="ldtc"></div><div class="ldtr"></div><div class="ldcf"></div>
+						<div class="ldcc">
+							<form name="logonForm" method="post" action="/amadeuslms/validateLogin.do">
+								<div class="dLogin">
+									<input name="login" maxlength="150" value="" class="inputlogin" type="text">
+								</div>
+								<div class="dPassword">
+									<input name="password" maxlength="15" value="" class="inputlogin" type="password">
+								</div>
+								<div id="dInputLoginOpenID" class="dInputLoginOpenID">
+									<input id="identifier" class="inputLoginOpenID" maxlength="150" type="text">
+									<a href="#" onclick="requestOpenID('openIDActions.do?method=openIDRequest&amp;identifier=')" ;="">GO</a>
+								</div>
+								<div id="openIDLogin" class="openIDLogin">
+									<div class="enter"><input name="logonForm" value="Entrar" class="buttonEnter" type="submit"></div>
+									<div class="or">ou</div> 
+									<div class="opendIDGoogle" title="Google Account" onclick="requestGoogleOpenID('openIDActions.do?method=googleAccountsRequest');"></div>
+								</div>
+								<div id="remindPassword" class="remindPassword">
+									<a href="/recuperar-senha" class="insert">Lembrar senha</a> &nbsp;      
+
+									<a href="/amadeuslms/user.do?method=showViewInsertUser" class="insert">Nova conta</a>
+
+								</div>
+							</form>
+							<script type="text/javascript" language="JavaScript">
+							<!--
+							var focusControl = document.forms["logonForm"].elements["login"];
+
+							if (focusControl.type != "hidden" && !focusControl.disabled) {
+								focusControl.focus();
+							}
+						  // -->
+						  </script>
+
+						</div>
+						<div class="ldcr"></div><div class="ldbf"></div><div class="ldbc"></div><div class="ldbr"></div>
+					</div>
+				{% endblock menu_esquerda %}
+		</div>
+		{% block lateral %}
+		<div class="prw">
+
+			<form name="searchCourseForm" method="post" action="/amadeuslms/searchCourse.do">
+				<div class="pTitleSearchCourse">
+					Buscar um curso:
+				</div>
+				<div class="pSearchCourse">
+					<input name="courseName" value="" class="formfield2" type="text">
+					<input name="searchCourse" value="Buscar" class="button" type="submit">
+				</div>
+			</form>
+			<script type="text/javascript" language="JavaScript">
+			<!--
+			var focusControl = document.forms["searchCourseForm"].elements["courseName"];
+
+			if (focusControl.type != "hidden" && !focusControl.disabled) {
+				focusControl.focus();
+			}
+			  // -->
+			  </script>
+
+			  <div class="pTitleKeyword">
+			  	Palavras-chave mais populares:
+			  </div>
+			  <div class="pTagcloud">
+			  	<a class="keywork0" href="fSearchCourse.do?keyword_course=web">web</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=framework">framework</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=intermediário">intermediário</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=teste amadeus prospb">teste amadeus prospb</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=programação para iniciantes">programação para iniciantes</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=aluno teste">aluno teste</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=android">android</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=programação web">programação web</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=amadeus">amadeus</a>, <a class="keywork3" href="fSearchCourse.do?keyword_course=python">python</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=kjsdnksa">kjsdnksa</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=curso">curso</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=programação fácil">programação fácil</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=palavra02">palavra02</a>, <a class="keywork1" href="fSearchCourse.do?keyword_course=programming">programming</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=ionic">ionic</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=mvc">mvc</a>, <a class="keywork1" href="fSearchCourse.do?keyword_course=django">django</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=palavra01">palavra01</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=programação">programação</a>, <a class="keywork0" href="fSearchCourse.do?keyword_course=curso0101">curso0101</a>
+			  </div>
+			</div>
+		{% endblock lateral %}
+		</div>
+
+		<div id="footnote">
+			<dl><dd>Copyright Amadeus. Todos os direitos reservados</dd><dd></dd></dl>
+		</div>
+
+		</div>
+	{% endblock %}
+	</body>
+</html>

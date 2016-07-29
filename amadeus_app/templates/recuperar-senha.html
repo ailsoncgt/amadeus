@@ -1,0 +1,92 @@
+{% extends 'index.html' %}
+	{% block cabecalho %}
+	<div id="pBody" class="pBody">
+		<div id="pHeader" class="pHeader">
+			<div id="login">
+				<dl id="formlogin">
+					<form name="logonForm" method="post" action="http://amadeus.cin.ufpe.br:8080/amadeuslms/validateLogin.do">				
+						<dt>
+							<input type="text" name="login" maxlength="15" size="15" value="" class="inputlogin">
+						</dt>
+						<dt>
+							<input type="password" name="password" maxlength="15" size="15" value="" class="inputlogin">&nbsp;
+							<input type="submit" name="logonForm" value="Entrar" class="button">
+						</dt>
+					</form>
+					<script type="text/javascript" language="JavaScript">
+						<!--
+						var focusControl = document.forms["logonForm"].elements["login"];
+
+						if (focusControl.type != "hidden" && !focusControl.disabled) {
+							focusControl.focus();
+						}
+					  // -->
+				  	</script>
+				</dl>
+			</div>
+		</div>
+	{% endblock %}
+	{% block corpo %}
+		<div id="pTitle" class="pTitle">
+			<h2>Lembrar senha</h2>
+		</div>
+		<div id="pBreadCrumbs" class="pBreadCrumbs">
+			<ul id="breadcrumb">
+				<li><a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/system.do?method=showViewWelcome">Página Inicial</a></li>
+				<li>Lembrar senha</li>
+			</ul>
+		</div>
+		<div id="pLeftMenu" class="pLeftMenu">
+			<div id="side_menu_1">
+				<ul id="menu_sessoes">
+					<li><a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/user.do?method=showViewInsertUser" class="insert">Nova conta</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="pContent" class="pContent">
+			<dl class="insert2">
+
+
+				<form name="remindPasswordForm" method="post" action="http://amadeus.cin.ufpe.br:8080/amadeuslms/remindPassword.do">
+					<dt>Endereço de e-mail</dt>
+					<dd><input type="text" name="email" value="" class="formfield2" id="username"></dd>
+					<dd class="description">Seu endereço de e-mail (exemplo@mail.com)</dd>
+					<dt class="field"><input type="submit" name="remindPassword" value="Enviar e-mail" class="button"></dt>
+				</form>
+				<script type="text/javascript" language="JavaScript">
+				<!--
+				var focusControl = document.forms["remindPasswordForm"].elements["email"];
+
+				if (focusControl.type != "hidden" && !focusControl.disabled) {
+					focusControl.focus();
+				}
+		  // -->
+		  </script>
+
+		</dl>		
+		</div>
+		<div id="pRightMenu" class="pRightMenu">
+		</div>
+				<!-- 
+		Copyright 2008, 2009 UFPE - Universidade Federal de Pernambuco
+		 
+		Este arquivo é parte do programa Amadeus Sistema de Gestão de Aprendizagem, ou simplesmente Amadeus LMS
+		 
+		O Amadeus LMS é um software livre; você pode redistribui-lo e/ou modifica-lo dentro dos termos da Licença Pública Geral GNU como
+		publicada pela Fundação do Software Livre (FSF); na versão 2 da Licença.
+		 
+		Este programa é distribuído na esperança que possa ser útil, mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a Licença Pública Geral GNU para maiores detalhes.
+		 
+		Você deve ter recebido uma cópia da Licença Pública Geral GNU, sob o título "LICENCA.txt", junto com este programa, se não, escreva para a Fundação do Software Livre (FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA.
+		-->
+
+
+
+
+
+		<div id="footnote">
+			<dl><dd>Copyright Amadeus. Todos os direitos reservados</dd><dd></dd></dl>
+		</div>
+
+		</div>
+	{% endblock %}

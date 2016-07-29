@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+	{%  block corpo %}
+		<div id="all">
+			{% block caminho %}
+			<div id="page_title">
+				<h2>Cadastro de Curso</h2>
+			</div>
+			
+			<div id="breadcrumbs">
+				<ul id="breadcrumb">
+					<li><a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/system.do?method=showViewMenu">Página Inicial</a></li>
+					<li>Cadastro de Curso</li>
+				</ul>
+			</div>
+			{% endblock caminho %}
+			{% block menu_esquerda %}
+			<div id="side_menu">
+				<div id="side_menu_1">
+					<ul id="menu_sessoes">
+						<li><a href="/amadeuslms/fProject.do">O Projeto</a></li>
+				    </ul>
+				</div>
+			</div>
+			{% endblock %}
+			{% block lateral %}				
+			<div id="content">
+				<dl class="insert2">
+					<form name="formRegisterCourseStepOne" method="post" action="http://amadeus.cin.ufpe.br:8080/amadeuslms/insertCourseStepOne.do">
+					
+					<dt>Nome do curso</dt>
+						<dd class="field"><input type="text" name="name" value="" class="formfield" id="realname"></dd>
+						<dd class="description">O nome do curso</dd>
+					<dt>Objetivos</dt>
+						<dd class="field"><textarea name="objectives" class="formfield" id="courseObjectives"></textarea></dd>
+						<dd class="description">Objetivos do curso</dd>
+					<dt>Programa</dt>
+						<dd class="field"><textarea name="content" class="formfield" id="courseContent"></textarea></dd>
+						<dd class="description">Visualizar Módulos</dd>
+					<dt>O máximo de alunos:</dt> 
+						<dd class="field"><input type="text" name="maxAmountStudents" value="" class="formfield" id="courseStudents"></dd>
+						<dd class="description">O máximo de alunos:</dd>
+				<dt>Data de início da inscrição do curso</dt> 
+						<dd class="field2"><input type="text" name="initialRegistrationDay" maxlength="2" value="" class="date2" id="dia"> / 
+									      <input type="text" name="initialRegistrationMonth" maxlength="2" value="" class="date2" id="mes"> / 
+										  <input type="text" name="initialRegistrationYear" maxlength="4" value="" class="date" id="ano"></dd>
+						<dd class="description">Data de início da inscrição do curso (dd/mm/aaaa)</dd>
+					<dt>Data de término da inscrição do curso</dt>
+						<dd class="field2"><input type="text" name="finalRegistrationDay" maxlength="2" value="" class="date2" id="dia"> / 
+							  			  <input type="text" name="finalRegistrationMonth" maxlength="2" value="" class="date2" id="mes"> / 
+										  <input type="text" name="finalRegistrationYear" maxlength="4" value="" class="date" id="ano"></dd>
+						<dd class="description">Data de término da inscrição do curso (dd/mm/aaaa)</dd>
+					<dt>Data de início do curso</dt>
+						<dd class="field2"><input type="text" name="initialCourseDay" maxlength="2" value="" class="date2" id="dia"> / 
+										  <input type="text" name="initialCourseMonth" maxlength="2" value="" class="date2" id="mes"> / 
+						                  <input type="text" name="initialCourseYear" maxlength="4" value="" class="date" id="ano"></dd>
+						<dd class="description">Data de início do curso (dd/mm/aaaa)</dd>
+					<dt>Data de término do curso</dt>
+						<dd class="field2"><input type="text" name="finalCourseDay" maxlength="2" value="" class="date2" id="dia"> / 
+		              					  <input type="text" name="finalCourseMonth" maxlength="2" value="" class="date2" id="mes"> / 
+						                  <input type="text" name="finalCourseYear" maxlength="4" value="" class="date" id="ano"></dd>
+						<dd class="description">Data de término do curso (dd/mm/aaaa)</dd>
+					<dt class="field"><input type="submit" name="insertCourseStepOne" value="Avançar" class="button"></dt>
+					<br><ul id="required"><li>Todos os campos são de preenchimento obrigatório</li></ul>
+					</form>
+				</dl>
+			</div>
+			{% endblock lateral %}
+		</div>
+	{% endblock %}
+	
+	</body>
+	<object id="fa3a6888-db49-9ba7-6bda-098a5a90b48e" width="0" height="0" type="application/gas-events-bb"></object>

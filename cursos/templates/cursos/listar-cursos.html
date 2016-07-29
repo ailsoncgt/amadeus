@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+	{% block leftMenu %}
+		<ul id="menu-lateral">
+			<li>
+				<a href="#">Inicio</a>
+			</li>
+			<li>
+				<a href="{% url 'courses:list_courses' %}">Cursos</a>
+			</li>
+			<li>
+				<a href="#">Usuarios</a>
+			</li>
+			<li>
+				<a href="{% url 'core:logout' %}">Sair</a>
+			</li>
+		</ul>
+	{% endblock %}
+	{% block rightContent %}
+		<!-- <i class="material-icons">search</i> -->
+		<h3 style="display: inline-block; margin-bottom: 1em">Cursos</h3>
+		<a href="{% url 'courses:create_course' %}">
+			<i class="material-icons pull-right" style="color: #009900">add</i>
+		</a>
+		{% for course in courses %}
+			<div class="curso">
+				<div class="col-md-3">
+					<img src="{{ course.image.url }}" alt="{{ course.name }}" class="img-responsive pull-left">	
+				</div>
+				
+				<div class="col-md-9 text-left " style="margin-top: -2.5em">
+					<a href="#"><h4>{{ course.name }}<h4></a>
+					<p>{{ course.description }}</p>	
+				</div>
+				
+			</div>
+			<div class="clearfix"></div>
+			<hr>
+		{% endfor %}
+		
+	{% endblock %}

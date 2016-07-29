@@ -1,0 +1,18 @@
+Conceitos = ORM;
+
+Em python tudo e publico -- nao tem modificadore de acesso
+
+
+Verbose_name = Um nome mais legivel;
+new = nova instancia;
+__init__ = inicia a instancia;
+
+default apps
+	- django.contrib.auth -> sistema de usuarios do django
+		- comando : createsuperuser;
+
+
+{%  %} -- Template tags;
+get_object_or_404 -- objeto ou mostra a pagina 404
+
+

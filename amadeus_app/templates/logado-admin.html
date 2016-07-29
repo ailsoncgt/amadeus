@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+
+{% block menu_esquerda %}	
+	<div class="pw">
+		<div class="plw">
+			<div id="youHave" class="youHave">
+				<div id="youHaveTitle" class="youHaveTitle">Você tem:</div>
+				
+					<div id="youHavePendingTasks" class="youHavePendingTasks">
+						<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/user.do?method=showViewPendingTasks">(4)Tarefas Pendentes.</a>
+					</div>
+				
+				
+       	  		<div id="youHaveOnlineUser" class="youHaveOnlineUser">
+       	  			<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/user.do?method=showViewOnlineUsers">(<span id="countOnlineUser">1</span>)&nbsp;Usuários Online.</a>
+  	      		</div>
+  	      	</div>	
+       		
+       		<div id="youCan" class="youCan">
+				<div id="youCanTitle" class="youCanTitle">Você pode:</div>
+				<div id="youCanInsertCourse" class="youCanInsertCourse">
+					<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/fInsertCourseStepOne.do">Criar Curso</a>
+				</div>
+				
+				<div id="youCanManagerUser" class="youCanManagerUser">
+					<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/user.do?method=showViewAllUsersInManagerUsers">Gerenciar Usuários</a>
+				</div>
+				<div id="youCanManagerCourse" class="youCanManagerCourse">
+					<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/user.do?method=showViewAllCoursesInManagerUsers">Gerenciar Cursos</a>
+				</div>
+				
+			</div>
+       		
+			<div id="yourCourses" class="yourCourses">
+				<div id="yourCoursesTitle" class="yourCoursesTitle">Seu(s) curso(s):</div>
+				
+		  			<div id="yourCourse" class="yourCourse">	
+		  				<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/course.do?method=showViewCourse&amp;courseId=14">Curso01</a>
+					</div>
+				
+		  			<div id="yourCourse" class="yourCourse">	
+		  				<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/course.do?method=showViewCourse&amp;courseId=42">Python</a>
+					</div>
+				
+		  			<div id="yourCourse" class="yourCourse">	
+		  				<a href="http://amadeus.cin.ufpe.br:8080/amadeuslms/course.do?method=showViewCourse&amp;courseId=92">Curso Amadeus - Toscano</a>
+					</div>
+				
+			</div>
+			<div class="line"></div>
+		</div>
+	</div>
+{% endblock %}
+

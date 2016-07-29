@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+	{% block leftMenu %}
+		<form action="#" method="post">
+		{% csrf_token %}
+			{% for error in form.non_field_errors %}
+		        <div class="alert alert-danger">
+		            {{ error }}
+		        </div>
+	        {% endfor %}
+			{% for field in form %}
+	            <div class="form-group{% if field.errors %} has-error{% endif %}">
+	                <label for="{{ field.auto_id }}" class="">{{ field.label }}</label>
+	                <div class="">
+	                  {% render_field field class='form-control' %}
+	                  {% for error in field.errors %}
+	                  <span class="help-block" id="erro">{{ error }}</span>
+	                  {% endfor %}
+	                </div>
+	            </div>
+            {% endfor %}
+			<button class="btn btn-success text-center" type="submit"> Entrar </button>
+		</form>
+	{% endblock %}
+	{% block rightContent %}
+		<!-- <i class="material-icons">search</i> -->
+		<h3 style="display: inline">Buscar um curso</h3>
+		<form action="#">
+			<div class="form-group">
+				<div class="col-md-2"></div>			
+				<input type="text" class="col-md-8" placeholder="Buscar por...">
+			</div>
+		</form>
+		<div class="clearfix"></div>
+		<hr>
+		<h4>Palavras chaves</h4>
+		<p>programação web, curso0101, programação fácil, palavra01, teste amadeus prospb, android, amadeus, web, programming, mvc, jkhkjn, python, framework, palavra02, programação para iniciantes, kjsdnksa, django, intermediário, aluno teste, programação, ionic, curso</p>
+	{% endblock %}
